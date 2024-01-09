@@ -27,7 +27,9 @@ public class cineaa {
     	 System.out.println("");
     		 
     	 }
+     try {
      do {
+    	
        System.out.println("dime que fila quieres");
        fila= scanner.nextInt();
        System.out.println("dime la comuna");
@@ -45,8 +47,12 @@ public class cineaa {
    	 }
    	 System.out.println("");
 	}
-     }while(con!=-1);
 	
+	
+     }while(con!=-1);
+	}catch(Exception e) {
+	  System.out.println("TERMINADO");
+	}
 	
    		 }
      }

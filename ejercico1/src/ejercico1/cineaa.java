@@ -11,6 +11,7 @@ public class cineaa {
   
     int fila;
     int con;
+    String conti;
    
      for (int i =0; i<10;i++) {
     	 
@@ -29,7 +30,9 @@ public class cineaa {
     	 }
      try {
      do {
-    	
+    	 System.out.println("para resevar mas entradas di seguir si no poner terminar");
+    	 conti=scanner.next();
+    	if (conti.equals ("Seguir")) {
        System.out.println("dime que fila quieres");
        fila= scanner.nextInt();
        System.out.println("dime la comuna");
@@ -40,6 +43,11 @@ public class cineaa {
        else {
     	  System.out.println("ocupado");
        }
+    	   }else {
+    		   System.out.println("terminado");
+    	   }
+       
+    	
 	for(int i=0;i<10;i++) {
    	 
    	 for(int j=0;j<10;j++) {
@@ -49,7 +57,7 @@ public class cineaa {
 	}
 	
 	
-     }while(con!=-1);
+     }while(conti.equals("Seguir"));
 	}catch(Exception e) {
 	  System.out.println("TERMINADO");
 	}

@@ -12,6 +12,7 @@ public class cineaa {
     int fila;
     int con;
     String conti;
+    boolean segur = true;
    
      for (int i =0; i<10;i++) {
     	 
@@ -32,7 +33,7 @@ public class cineaa {
      do {
     	 System.out.println("para resevar mas entradas di seguir si no poner terminar");
     	 conti=scanner.next();
-    	if (conti.equals ("Seguir")) {
+    	if (conti.equalsIgnoreCase("Seguir")) {
        System.out.println("dime que fila quieres");
        fila= scanner.nextInt();
        System.out.println("dime la comuna");
@@ -45,6 +46,7 @@ public class cineaa {
        }
     	   }else {
     		   System.out.println("terminado");
+    		   segur = false;
     	   }
        
     	
@@ -57,9 +59,9 @@ public class cineaa {
 	}
 	
 	
-     }while(conti.equals("Seguir"));
+     }while(segur);
 	}catch(Exception e) {
-	  System.out.println("TERMINADO");
+	  System.out.println("ERROR");
 	}
 	
    		 }
